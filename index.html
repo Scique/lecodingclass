@@ -10,13 +10,16 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         h2{
-            font-weight: bold; 
+            font-weight: bold;
             background-color: rgba(119, 162, 241, 0.774);
+            width: fit-content;
+            border-radius: 10px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <h1 style="background: rgba(137, 43, 226, 0.507);">Info</h1>
+    <h1 style="background: rgba(137, 43, 226, 0.507);width: fit-content; border-radius: 10px;padding: 10px;">Info</h1>
     <p><strong>Name:</strong> IQ</p>
     <p><strong>Age: </strong> 69</p>
     <br>
@@ -26,19 +29,33 @@
         <li>Vegan Teacher</li>
         <li>Join our Cloud HD Video Meeting</li>
         <li>Spongebeb</li>
-        <li>Tesla Model S Plaid Edition</li>
-        <li>James</li>
+        <li>Tesla Model S</li>
+        <li>Rick Astley</li>
     </ul>
     <h2>Favorite Anime</h2>
     <ol>
         <li>Super Idol的笑容都没你的甜八月正午的阳光都没你耀眼热爱 105 °C的你滴滴清纯的蒸馏水你不知道你有多可爱跌倒后会傻笑着再站起来你从来都不轻言失败对梦想的执着一直</li>
         <li>Family Guy</li>
-        <li>Bob's Burgers</li>
-        <li>Toyota Corolla: The Uprising</li>
+        <li>The Simps</li>
+        <li>Toyota Corolla: The Nissan Uprising</li>
         <li>Godzilla: Joining Soviet Army</li>
         <li>In Russia: Godzilla don't eat you, you eat Godzilla</li>
         <li>John Xina: +1 Social Credit Score</li>
-
+        <li><img src="https://i.redd.it/5h4xy5zr14u71.jpg" alt="John Xina" width="25%"></li>
+        <button id="JohnXina">+1 Social Credit - Make John Xina Proud</button>
+        <p id="xinajohnanswer">You have 0 social credit... John Xina not happy!</p>
     </ol>
 </body>
+<script>
+let buttonData = document.getElementById("JohnXina")
+
+let i = 0
+let pData = document.getElementById("xinajohnanswer")
+buttonData.onclick = function() {
+    i++
+    pData.textContent = ("You now have "+i+" social credit! John Xina is pleased with your efforts")
+    open("https://youtu.be/AWOyEIuVzzQ", "_blank")
+}
+
+</script>
 </html>
