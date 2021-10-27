@@ -16,6 +16,7 @@
             border-radius: 10px;
             padding: 10px;
         }
+
     </style>
 </head>
 <body>
@@ -45,17 +46,31 @@
         <button id="JohnXina">+1 Social Credit - Make John Xina Proud</button>
         <p id="xinajohnanswer">You have 0 social credit... John Xina not happy!</p>
     </ol>
+    <br><br>
+
+    <h2>Special Button wowowowow</h2>
+    <input type="text" id="textcombine1" placeholder="enter something">
+    <input type="text" id="textcombine2" placeholder="enter something">
+    <button id="textcombinebutton">magic button press now</button>
+    <p id="combineanswer">magic answer</p>
+
 </body>
 <script>
-let buttonData = document.getElementById("JohnXina")
+    let buttonData = document.getElementById("JohnXina")
+    let i = 0
+    let pData = document.getElementById("xinajohnanswer")
+    buttonData.onclick = function() {
+        i++
+        pData.textContent = ("You now have "+i+" social credit! John Xina is pleased with your efforts")
+        open("https://youtu.be/AWOyEIuVzzQ")
+    }
 
-let i = 0
-let pData = document.getElementById("xinajohnanswer")
-buttonData.onclick = function() {
-    i++
-    pData.textContent = ("You now have "+i+" social credit! John Xina is pleased with your efforts")
-    open("https://youtu.be/AWOyEIuVzzQ")
-}
-
+    let textbox1 = document.getElementById("textcombine1")
+    let textbox2 = document.getElementById("textcombine2")
+    let answer = document.getElementById("combineanswer")
+    let button = document.getElementById("textcombinebutton")
+    button.onclick = function(){
+        answer.textContent = (textbox1.value + textbox2.value)
+    }
 </script>
 </html>
