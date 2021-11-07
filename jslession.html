@@ -18,6 +18,40 @@
         <input type="text" id="textbo">
         <button id="add">add</button>
     </div>
+
+    <ol id="items"></ol>
+
+
+    <h1>Image list</h1>
+    <div>
+        <label for="imagebo"></label>
+    </div>
 </body>
-<script></script>
+<script>
+    let input = document.getElementById("textbo")
+    let button = document.getElementById("add")
+    let itemlist = document.getElementById("items")
+
+    button.onclick = function() {
+        let stuff = input.value 
+
+        let listitem = document.createElement("li")
+
+        let itemContent = document.createElement("p")
+        itemContent.textContent = stuff
+
+        let removeButton = document.createElement("button")
+        removeButton.textContent = "delet"
+
+        removeButton.onclick = function() {
+            itemlist.removeChild(listitem)
+        }
+
+        itemlist.appendChild(listitem)
+        listitem.appendChild(itemContent)
+        listitem.appendChild(removeButton)
+    }
+    // homework = add a function to be able to add an image using a link
+    
+</script>
 </html>
